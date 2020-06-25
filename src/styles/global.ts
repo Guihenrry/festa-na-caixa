@@ -3,6 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
   :root {
     --background: #F2F2F2;
+    --white: #FFFFFF;
+    --purple: #4B4684;
   }
 
   * {
@@ -12,8 +14,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: var(---background);
-    font-family: 'Nutito', sans-serif;
+    background: var(--background);
+    font-family: 'Nunito', sans-serif;
   }
 
   img {
