@@ -24,14 +24,6 @@ export const Slide = styled.div.attrs((props: SlideProps) => ({
   > div {
     width: 80vw;
     flex-shrink: 0;
-    max-width: 800px;
-    opacity: 0.8;
-    transform: scale(0.8);
-    transition: 0.4s;
-  }
-
-  > div.active {
-    opacity: 1;
-    transform: scale(1);
+    max-width: 384px;
   }
 `;

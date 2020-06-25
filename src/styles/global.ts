@@ -22,4 +22,8 @@ export default createGlobalStyle`
     display: block;
     max-width: 100%;
   }
+
+  button {
+    cursor: pointer;
+  }
 `;
