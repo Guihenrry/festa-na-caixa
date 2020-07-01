@@ -6,6 +6,8 @@ import * as S from './styles';
 import visaImg from '../../assets/visa.svg';
 import boxFestaJuninaImg from '../../assets/box-festa-junina.svg';
 
+import newId from '../../utils/newId';
+
 import { ReactComponent as CandleIcon } from '../../assets/candle.svg';
 import { ReactComponent as InvitationIcon } from '../../assets/invitation.svg';
 import { ReactComponent as BalloonIcon } from '../../assets/balloon.svg';
@@ -183,9 +185,8 @@ const Checkout: React.FC = () => {
               <img src={visaImg} alt="Visa" />
               <S.CardData>
                 <S.CardNumber>
-                  {cardNumberArray.map((item, index) => (
-                    //  eslint-disable-next-line
-                <span key={index}>{item}</span>
+                  {cardNumberArray.map((item) => (
+                    <span key={newId()}>{item}</span>
                   ))}
                 </S.CardNumber>
 
