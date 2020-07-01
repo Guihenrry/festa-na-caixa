@@ -1,4 +1,18 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+import checkImg from '../../assets/check.svg';
+
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 
 export const Conatiner = styled.section`
   padding: 48px 24px;
@@ -8,12 +22,28 @@ export const Conatiner = styled.section`
 
 interface StepProps {
   active?: boolean;
+  complete?: boolean;
 }
 
 export const Step = styled.div<StepProps>`
   width: 128px;
-  opacity: ${(props) => (props.active ? 1 : 0.5)};
+  transition: opacity 0.3s;
+  opacity: ${(props) => (props.active || props.complete ? 1 : 0.5)};
   position: relative;
+
+  ${(props) =>
+    props.complete &&
+    css`
+      > p {
+        display: none;
+      }
+
+      strong {
+        background: url(${checkImg}) no-repeat center center var(--purple);
+        color: transparent;
+        animation: ${pulse} 0.8s ease;
+      }
+    `}
 
   & + div {
     margin-left: 80px;

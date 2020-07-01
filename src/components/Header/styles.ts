@@ -7,6 +7,6 @@ export const Header = styled.header`
 `;
 
 export const Container = styled.div`
-  max-width: 1216px;
+  max-width: var(--container);
   margin: 0 auto;
 `;

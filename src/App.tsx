@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import GlobalStyles from './styles/global';
 import Header from './components/Header';
+import Steps from './components/Steps';
 import Routes from './routes';
 
 const App: React.FC = () => {
@@ -10,6 +11,7 @@ const App: React.FC = () => {
     <Router>
       <GlobalStyles />
       <Header />
+      <Steps />
       <Routes />
     </Router>
   );
